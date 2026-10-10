@@ -1,0 +1,50 @@
+{
+  "name": "pidude-web-inspector",
+  "version": "0.1.0",
+  "description": "Point at local preview elements and reference them in Pi prompts",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-coding-agent",
+    "extension",
+    "browser",
+    "preview",
+    "developer-tools"
+  ],
+  "files": [
+    "src",
+    "README.md",
+    "INSTALL.md",
+    "LICENSE",
+    "docs",
+    "optional"
+  ],
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test test/*.test.ts",
+    "test:browser": "tsx --test test/browser.integration.ts",
+    "check": "npm run typecheck && npm test && npm run test:browser"
+  },
+  "dependencies": {
+    "playwright": "^1.63.0"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "^1.1.0",
+    "@types/node": "^24.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
