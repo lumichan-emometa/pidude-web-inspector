@@ -193,5 +193,5 @@ Further reading: [specification](docs/PIDUDE-WEB-INSPECTOR-SPEC.md) · [validati
 > Built at PiDude. Shared with developers who want clearer communication with their AI agents.
 
 <p align="center">
-  <img src="assets/dudebot.png" alt="DudeBot, the PiDude robot signing off" width="320">
+  <img src="assets/pidude-logo.png" alt="PiDude logo" width="360">
 </p>
