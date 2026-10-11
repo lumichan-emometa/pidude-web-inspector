@@ -1,0 +1,45 @@
+{
+  "_comment": "JSON-LD for pidude.dev — paste inside a <script type=\"application/ld+json\"> tag on the homepage/product page to help search and answer engines.",
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "PiDude Web Inspector",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "macOS, Linux, Windows",
+      "slogan": "Point to the element. Give the instruction.",
+      "description": "PiDude Web Inspector is a free, open-source extension for the Pi coding agent. Select an element in your local web preview and insert an @element_N reference into your prompt, giving AI coding agents precise visual context — selector, tag, text, accessibility labels, and page path.",
+      "url": "https://pidude.dev",
+      "downloadUrl": "https://github.com/lumichan-emometa/pidude-web-inspector",
+      "license": "https://opensource.org/licenses/MIT",
+      "isAccessibleForFree": true,
+      "author": { "@type": "Organization", "name": "PiDude", "url": "https://pidude.dev" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is PiDude Web Inspector?",
+          "acceptedAnswer": { "@type": "Answer", "text": "PiDude Web Inspector is a free, open-source (MIT) extension for the Pi coding agent. It lets developers select an element in a local web preview and insert an @element_N reference into their prompt, so the AI agent receives precise visual context — selector, tag, text, accessibility labels, and page path — instead of a vague description." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I reference a UI element to an AI coding agent?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Run /preview http://localhost:5173 in Pi, switch the picker to Select, click the element, then choose Insert into Pi. The reference lands at your editor cursor; when you send the prompt, the agent receives the element's metadata as focused context." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it collect my data?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It captures only the selected element's metadata and sends it to your configured model when you submit a referenced prompt. It never captures form values, cookies, storage, full-page HTML, or URL query strings, and it only opens localhost, 127.0.0.1, or [::1] previews in a separate, temporary browser profile." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is PiDude Web Inspector free?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes — MIT-licensed open source, built at PiDude (pidude.dev)." }
+        }
+      ]
+    }
+  ]
+}

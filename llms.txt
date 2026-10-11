@@ -1,0 +1,30 @@
+# PiDude Web Inspector
+
+> Point to the element. Give the instruction. PiDude Web Inspector is a free, open-source (MIT) extension for the Pi coding agent that lets developers select an element in a local web preview and insert an `@element_N` reference into Pi prompts, giving AI coding agents precise visual context — CSS selector, tag name, visible text, accessibility labels, and page path — without repeated explanations.
+
+PiDude Web Inspector runs as an extension of the [Pi coding agent](https://github.com/earendil-works/pi-coding-agent). `/preview URL` opens a dedicated Chromium picker over any localhost dev server. Selecting an element registers an immutable metadata snapshot in the Pi session; **Insert into Pi** pastes `@element_N` at the editor cursor. When the prompt is sent, referenced metadata is attached to the request-time copy of the message only. References are deduplicated (max 12 per prompt), bounded (16,000-character context budget), labeled as untrusted page metadata, and scoped to the originating session and branch. Form values, cookies, storage, full-page HTML, and URL query strings are never captured; only loopback HTTP(S) previews are supported.
+
+## Install
+
+- Clone and run: `pi -e ./src/index.ts` (after `npm install` and `npx playwright install chromium`)
+- Release ZIP: extract, then ask Pi to follow INSTALL.md (installs to `~/.pi/agent/extensions/pidude-web-inspector/`)
+- Working checkout: `pi install -l /absolute/path/to/pidude-web-inspector`
+
+Requirements: Node.js 22+, Pi with `ctx.ui.pasteToEditor()` (tested 0.87.0–1.1.0), a local graphical desktop.
+
+## Commands
+
+- `/preview URL`: open the dedicated preview picker (localhost, 127.0.0.1, or [::1] HTTP(S) only)
+- `/preview help`: usage guide
+- `/preview status`: connection status and saved-reference count
+- `/preview close`: close the browser, keep references
+- `/preview clear`: close the browser and forget references
+
+## Links
+
+- GitHub: https://github.com/lumichan-emometa/pidude-web-inspector
+- Website: https://pidude.dev
+- License: MIT (© pidude.dev)
+- Specification: docs/PIDUDE-WEB-INSPECTOR-SPEC.md
+- Validation report: docs/VALIDATION.md
+- Demo recording plan: docs/DEMO.md

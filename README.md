@@ -154,6 +154,23 @@ This release supports local previews only (`localhost`, `127.0.0.1`, `[::1]`). A
 - Snapshot metadata survives rerenders but can become stale; reselect after substantial page changes.
 - A blocking Pi extension dialog prevents direct insertion; close it or use **Copy reference**.
 
+## FAQ
+
+### What is PiDude Web Inspector?
+PiDude Web Inspector is a free, open-source (MIT) extension for the [Pi coding agent](https://github.com/earendil-works/pi-coding-agent). It lets developers select an element in a local web preview and insert an `@element_N` reference into their prompt, so the AI agent receives precise visual context — selector, tag, text, accessibility labels, and page path — instead of a vague description.
+
+### How do I reference a UI element to an AI coding agent?
+Run `/preview http://localhost:5173` in Pi, switch the picker to **Select**, click the element, then choose **Insert into Pi**. The reference lands at your editor cursor; when you send the prompt, the agent receives the element's metadata as focused context.
+
+### Which models or agents does it work with?
+It works with whatever model is configured in your Pi session. PiDude Web Inspector supplies the visual context; your chosen model does the coding.
+
+### Does it collect my data?
+It captures only the selected element's metadata and sends it to your configured model when you submit a referenced prompt. It never captures form values, cookies, storage, full-page HTML, or URL query strings, and it only opens `localhost`, `127.0.0.1`, or `[::1]` previews in a separate, temporary browser profile.
+
+### Is PiDude Web Inspector free?
+Yes — MIT-licensed open source, built at PiDude ([pidude.dev](https://pidude.dev)).
+
 ## Development and tests
 
 ```sh

@@ -4,6 +4,14 @@
   "description": "Point at local preview elements and reference them in Pi prompts",
   "type": "module",
   "license": "MIT",
+  "homepage": "https://pidude.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lumichan-emometa/pidude-web-inspector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lumichan-emometa/pidude-web-inspector/issues"
+  },
   "keywords": [
     "pi-package",
     "pi",
