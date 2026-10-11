@@ -24,24 +24,17 @@ No Pi fork, browser extension, or application code changes are required.
 
 ## Demo
 
-<!-- Placeholder: record docs/demo.gif following docs/DEMO.md, then uncomment the embed below.
-![Demo: selecting an element in the local preview and inserting @element_1 into Pi](docs/demo.gif)
--->
+![Demo: selecting an element in the local preview and inserting @element_1 into Pi](assets/demo.gif)
 
-A short demo recording (~15–30 seconds) will be published with the release. It will show one real, end-to-end task — no mocks:
+The real picker flow: switch to **Select**, hover, click, **Parent** to target a bigger container, then **Insert into Pi**. The alias `@element_1` lands in Pi's editor at your cursor; only the tag is visible in chat while the element's metadata rides along to the model — exactly as described in [Quick Start](#quick-start).
 
-1. Opening a local dev-server preview with `/preview URL`
-2. Switching the panel to **Select** and clicking an element
-3. Clicking **Insert into Pi** so `@element_1` lands at the editor cursor
-4. Sending an instruction such as:
+A typical instruction then looks like:
 
-   ```text
-   Make @element_1 wider and align its label to the left. Keep the existing colors and typography.
-   ```
+```text
+Make @element_1 wider and align its label to the left. Keep the existing colors and typography.
+```
 
-5. Showing the preview after the agent applies the change
-
-Until then, [Quick Start](#quick-start) below walks through the same flow step by step. The recording plan and acceptance checklist live in [docs/DEMO.md](docs/DEMO.md).
+Want a full end-to-end clip (open → select → insert → agent applies the change)? The shot list and acceptance checklist live in [docs/DEMO.md](docs/DEMO.md).
 
 ## Why We Built It
 
